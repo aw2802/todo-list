@@ -4,7 +4,7 @@ export function addTodo(text){
 	console.log("adding todo!");
 	return{
 		type: 'ADD_TODO',
-		index: TodoId++,
+		id: TodoId++,
 		text
 	}
 }
