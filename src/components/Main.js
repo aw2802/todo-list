@@ -5,7 +5,7 @@ import TodoList from './TodoList';
 const Main = React.createClass({
 	render(){
 		return(
-			<div>
+			<div className="todo-list-container">
 				<AddTodo />
 				<TodoList {...this.props}/>
 			</div>

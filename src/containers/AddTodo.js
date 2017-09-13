@@ -15,7 +15,7 @@ let AddTodo = React.createClass({
 	render(){
 		return(
 			<form ref="todoForm" className="todo-form" onSubmit={this.handleSubmit}>
-				<input type="text" ref="todo" placeholder="Input todo here" />
+				<input type="text" ref="todo" placeholder="input todo here" />
 				<input type="submit" hidden />
 			</form> 
 		)

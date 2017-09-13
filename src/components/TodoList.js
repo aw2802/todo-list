@@ -5,7 +5,7 @@ const TodoList = React.createClass({
 	render(){
 		return(
 			<div>
-				<ul>{this.props.todos.map(todo => <Todo {...todo}/>)}</ul>
+				<ul className="item-list">{this.props.todos.map(todo => <Todo {...todo}/>)}</ul>
 			</div>
 		)
 	}
