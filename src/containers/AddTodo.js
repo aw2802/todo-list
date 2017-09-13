@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions/actionCreators';
+import TodoList from '../components/TodoList';
 
 let AddTodo = React.createClass({
 
@@ -9,7 +10,6 @@ let AddTodo = React.createClass({
 		const todo = this.refs.todo.value;
 		this.props.dispatch(addTodo(todo));
 		this.refs.todoForm.reset();
-
 	},
 
 	render(){
