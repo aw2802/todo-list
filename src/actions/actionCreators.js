@@ -10,10 +10,10 @@ export function addTodo(text){
 }
 
 //delete a todo
-export function removeTodo(index){
+export function removeTodo(id){
 	return{
 		type: 'REMOVE_TODO',
-		index
+		id
 	}
 }
 

@@ -1,7 +1,6 @@
 const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      console.log("addinnnngg nooww");
       return [
         ...state,
         {
@@ -10,7 +9,10 @@ const todos = (state = [], action) => {
         }
       ]
     case 'DELETE_TODO':
-      return state;
+      return [
+        ...state.slice(0, action.id),
+        ...state.slice(action.id + 1)
+      ]
     default:
       return state;
   }
