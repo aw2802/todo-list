@@ -9,18 +9,25 @@ const todos = (state = [], action) => {
         }
       ]
     case 'DELETE_TODO':
-      console.log("deleting");
       return [
         ...state.slice(0, action.index),
         ...state.slice(action.index + 1)
       ]
-    case 'COMPLETED':
-      console.log("compleetttttedd");
-      return [
-         ...state.slice(0, action.index),
-         {...state[action.index], completed: true},
-         ...state.slice(action.index + 1)       
-      ]
+    case 'TOGGLE':
+      if(action.completed === false){
+          return [
+             ...state.slice(0, action.index),
+            {...state[action.index], completed: true},
+            ...state.slice(action.index + 1) 
+          ]
+      }
+      else{
+        return [
+          ...state.slice(0, action.index),
+          {...state[action.index], completed: false},
+          ...state.slice(action.index + 1) 
+        ]
+      }
     default:
       return state;
   }

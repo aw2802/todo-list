@@ -24,12 +24,17 @@
 	.item-list{
 		margin-top:10px;
 
+		button{
+			margin-right: 10px;
+		}
+
 		.todo-item{
+			margin:15px 0px;
+			margin-left:10px;
+			font-size: 20px;
 			list-style-type: none;
 			cursor: pointer;
-			margin:15px 0px;
-			margin-right:2.5px;
-			font-size: 20px;
+			border-bottom: 1px solid #A9A9A9;
 		}
 	}
 }
