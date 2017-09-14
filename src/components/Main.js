@@ -6,6 +6,7 @@ const Main = React.createClass({
 	render(){
 		return(
 			<div className="todo-list-container">
+				<h1 className="title">To Do List</h1>
 				<AddTodo />
 				<TodoList {...this.props}/>
 			</div>
