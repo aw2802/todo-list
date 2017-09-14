@@ -1,18 +1,16 @@
 //add a todo
-var TodoId = 0;
 export function addTodo(text){
 	return{
 		type: 'ADD_TODO',
-		id: TodoId++,
 		text
 	}
 }
 
 //delete a todo
-export function removeTodo(id){
+export function removeTodo(index){
 	return{
 		type: 'DELETE_TODO',
-		id
+		index
 	}
 }
 

@@ -4,14 +4,13 @@ const todos = (state = [], action) => {
       return [
         ...state,
         {
-          id: action.id,
           text: action.text,
         }
       ]
     case 'DELETE_TODO':
       return [
-        ...state.slice(0, action.id),
-        ...state.slice(action.id + 1)
+        ...state.slice(0, action.index),
+        ...state.slice(action.index + 1)
       ]
     default:
       return state;

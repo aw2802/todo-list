@@ -2,7 +2,7 @@ import { createStore } from 'redux'
 import rootReducer from './reducers/index'
 
 const defaultState ={
-	todos: []
+	todos: [],
 }
 
 const store = createStore(rootReducer, defaultState);
