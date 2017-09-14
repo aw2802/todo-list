@@ -16,11 +16,20 @@
     height: 30px;
     font-size: 20px;
     border: 5px lavender solid;
-    text-align: center; }
+    text-align: center;
+    outline: none; }
   .todo-list-container .item-list {
     margin-top: 10px; }
     .todo-list-container .item-list button {
-      margin-right: 10px; }
+      margin-right: 10px;
+      appearance: none;
+      background: none;
+      border-style: none;
+      outline: none;
+      font-size: 30px; }
+    .todo-list-container .item-list button:hover {
+      color: red;
+      cursor: pointer; }
     .todo-list-container .item-list .todo-item {
       margin: 15px 0px;
       margin-left: 10px;
