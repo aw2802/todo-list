@@ -3,11 +3,10 @@ import { connect } from 'react-redux';
 import { removeTodo, toggle } from '../actions/actionCreators';
 
 let Todo = ({text, i, removeTodo, toggle, completed}) =>( 
-	<li className="todo-item" onClick={
+	<li className="todo-item"><button onClick={() => removeTodo(i)}>&times;</button>
+	<span onClick={
 		() => toggle(i, completed)} style={{textDecoration: completed ? 'line-through': 'none'
-	}}>
-	<button onClick={() => removeTodo(i)}>&times;</button>
-	{text}
+	}}>{text}</span>
 	</li>
 )
 
