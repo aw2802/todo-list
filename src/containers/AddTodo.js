@@ -1,13 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions/actionCreators';
-import TodoList from '../components/TodoList';
 
 let AddTodo = React.createClass({
 
 	handleSubmit(e){
 		e.preventDefault();
 		const todo = this.refs.todo.value;
+		if(!todo.trim()){
+			return;
+		}
 		this.props.dispatch(addTodo(todo));
 		this.refs.todoForm.reset();
 	},

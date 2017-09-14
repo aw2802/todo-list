@@ -1,7 +1,6 @@
 //add a todo
 var TodoId = 0;
 export function addTodo(text){
-	console.log("adding todo!");
 	return{
 		type: 'ADD_TODO',
 		id: TodoId++,
@@ -12,7 +11,7 @@ export function addTodo(text){
 //delete a todo
 export function removeTodo(id){
 	return{
-		type: 'REMOVE_TODO',
+		type: 'DELETE_TODO',
 		id
 	}
 }
